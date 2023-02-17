@@ -1,3 +1,5 @@
+# string methods - https://docs.python.org/3/library/stdtypes.html#string-methods
+
 # Besides numbers, Python can also manipulate strings, which can be expressed in several ways.
 # They can be enclosed in single quotes ('...') or double quotes ("...") with the same result 2.
 # \ can be used to escape quotes:
@@ -285,6 +287,40 @@ str.zfill(width)'''
 # Formatted string literals are strings prefixed with f or F
 # These strings may contain replacement fields, which are expressions delimited by curly braces {}
 # formatted strings are really expressions evaluated at run time
+
+'''strings implement all of the common sequence operations as below:
+This table lists the sequence operations sorted in ascending priority.
+In the table, s and t are sequences of the same type, n, i, j and k are integers and x is an arbitrary object that meets any type and value restrictions imposed by s.
+The in and not in operations have the same priorities as the comparison operations.
+The + (concatenation) and * (repetition) operations have the same priority as the corresponding numeric operations.
+
+Operation  --> Result
+
+x in s  --> True if an item of s is equal to x, else False
+
+x not in s  --> False if an item of s is equal to x, else True
+
+s + t  --> the concatenation of s and t
+
+s * n or n * s --> equivalent to adding s to itself n times
+
+s[i] --> ith item of s, origin 0
+
+s[i:j] --> slice of s from i to j
+
+s[i:j:k]  --> slice of s from i to j with step k
+
+len(s) --> length of s
+
+min(s) --> smallest item of s
+
+max(s) -->  largest item of s
+
+s.index(x[, i[, j]]) --> index of the first occurrence of x in s (at or after index i and before index j)
+
+s.count(x) --> total number of occurrences of x in s'''
+
+
 
 
 
