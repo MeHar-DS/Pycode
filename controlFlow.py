@@ -1,5 +1,9 @@
 users ={'Hans': 'active', 'Eleonore': 'inactive', 'chen': 'active' }
 
+# for user,status in users.copy().items():
+#     print(user, status)
+
+
 for user,status in users.copy().items():
     if status == 'inactive':
         del users[user]
