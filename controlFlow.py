@@ -17,6 +17,15 @@ for user,status in users.items():
         active_users[user]= status
 
 # range() function
+# range is a function that returns an object which stores a sequence of items
+# such object is called iterable that is, sutiabel for functions or constructs that
+# expect something from which they can obtain successive items until supply is exhausted
+# for is such a function and so is sum()
+
+print("Sum is :", sum(range(6)))
+
+
+
 
 for i in range(10):
     print(i)
@@ -35,6 +44,8 @@ seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 print(list(enumerate(seasons)))
 
 print(list(range(2,2)))
+
+
 
 for n in range(2, 10):
     print("n is: ", n)
