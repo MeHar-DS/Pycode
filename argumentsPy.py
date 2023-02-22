@@ -68,26 +68,28 @@
 # positional argument and 'name' as a key in the keyword arguments:
 
 
-# def foo(name,/, **kwds):
-#     return 'name' in kwds
-#
-# print(foo(1,**{'name': 2}))
+def foo(name,/, **kwds):
+    # print(name)
+    return 'name' in kwds
+
+
+print(foo(1, **{'name': 2}))
 
 # A return statement ends a function
 # Raising an error ends a program
-def ask_ok(prompt, retries=4, reminder='Please try again!'):
-    while True:
-        ok = input(prompt)
-        if ok in ('y', 'ye', 'yes'):
-            return True
-        if ok in ('n', 'no', 'nop', 'nope'):
-            return False
-        retries = retries - 1
-        if retries < 0:
-            raise ValueError('invalid user response')
-        print(reminder)
-
-
+# def ask_ok(prompt, retries=4, reminder='Please try again!'):
+#     while True:
+#         ok = input(prompt)
+#         if ok in ('y', 'ye', 'yes'):
+#             return True
+#         if ok in ('n', 'no', 'nop', 'nope'):
+#             return False
+#         retries = retries - 1
+#         if retries < 0:
+#             raise ValueError('invalid user response')
+#         print(reminder)
+#
+#
 # ask_ok('Do you really want to quit?')
 
 # i = 5

@@ -71,4 +71,29 @@ print("vec after filtering:", vec)
 # List comprehensions can contain complex expressions and nested functions
 
 from math import pi
-print("Rounding the value of pi with different decimal magnitude values of i: ", [str(round(pi,i)) for i in range(1,6)])
+print("Rounding the value of pi with different decimal magnitude values of i: ",
+      [str(round(pi, i)) for i in range(1, 6)])
+
+
+# Nested list comprehensions
+targ = []
+matrix = [[1, 2, 3, 4],
+          [5, 6, 7, 8],
+          [9, 10, 11, 12]]
+
+for i in range(len(matrix)+1):
+    targ.append([row[i] for row in matrix])
+
+print(targ)
+
+# Smarter Nested list comprehension alternative
+nestlstcomp = []
+
+nestlstcomp = [[row[m] for row in matrix] for m in range(4)]
+
+print(nestlstcomp)
+
+# Implementing the above feature using zip function
+ziplist = list(zip(*matrix))
+
+print(ziplist)
