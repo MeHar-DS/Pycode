@@ -7,7 +7,7 @@ class Color(Enum):
     BLUE = "blue"
 
 
-color = Color(input("Enter the colour of your choice : \"red\" \"green\" \"blue\""))
+color = Color(input("Enter the colour of your choice : \"red\" \"green\" or \"blue\" \n").strip().casefold())
 
 
 def match(color):

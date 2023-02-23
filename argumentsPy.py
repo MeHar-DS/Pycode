@@ -1,3 +1,36 @@
+# Keyword arguments
+
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage, the", type)
+    print("-- It's", state, "!")
+
+
+# Valid function calls
+# parrot(1000)                                          # 1 positional argument
+# parrot(voltage=1000)                                  # 1 keyword argument
+# parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
+# parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
+# parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
+# parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
+
+# Invalid function calls
+
+# parrot()                     # required argument missing
+# parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
+# parrot(110, voltage=220)     # duplicate value for the same argument
+# parrot(actor='John Cleese')  # unknown keyword argument
+
+
+# No argument may receive a value more than once
+
+def function(a):
+    pass
+
+
+function(0, a=1)  # This causes an error - function argument has multiple values
+
 # def cheeseshop(kind, *arguments, **keywords):
 #     print("-- Do you have any", kind, "?")
 #     print("-- I'm sorry, we're all out of", kind)
@@ -41,11 +74,11 @@
 # # both the above method of calling is similar
 #
 # pos_only_arg(2)
-#pos_only_arg(arg=2)  # Passing positional only param as keyword is not allowed
+# pos_only_arg(arg=2)  # Passing positional only param as keyword is not allowed
 
-#kwd_only_arg(2)  # Not allowed - Expects 0 positional arg but given one keyword arg
+# kwd_only_arg(2)  # Not allowed - Expects 0 positional arg but given one keyword arg
 
-#kwd_only_arg(a=2)  # Not allowed - name of the parameter does not match - Param and argument name should match
+# kwd_only_arg(a=2)  # Not allowed - name of the parameter does not match - Param and argument name should match
 
 # kwd_only_arg(arg=2)
 #
@@ -68,7 +101,7 @@
 # positional argument and 'name' as a key in the keyword arguments:
 
 
-def foo(name,/, **kwds):
+def foo(name, /, **kwds):
     # print(name)
     return 'name' in kwds
 
@@ -100,4 +133,4 @@ print(foo(1, **{'name': 2}))
 #
 #
 # i = 6
-# foo()   # Note that parameter is not passed becos during definition the var i is available defined on line 93
+# foo()   # Note that parameter is not passed because during definition the var i is available defined on line 93

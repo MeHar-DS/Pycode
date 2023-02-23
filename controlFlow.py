@@ -58,9 +58,18 @@ for n in range(2, 10):
         # loop fell through without finding a factor
         print(n, 'is a prime number')
 
-# pass statement is used when you dont want the code to do anything. it simply doesnt do anything
-# Can be used when u are developing code in the initial stages before a concrete code is written
+# pass statement is used when you don't want the code to do anything. it simply doesn't do anything
+# Can be used when you are developing code in the initial stages before a concrete code is written
 # allowing you to keep thinking at a more abstract level
 # The pass is silently ignored
+
+# Pass statement can be used if syntactically a statement is required however we don't want
+# to do anything or to create minimal classes such as below:
+
 class MyEmptyClass:
+    pass
+
+# It can also be used as a placeholder for a function
+
+def initilog(*args):
     pass
