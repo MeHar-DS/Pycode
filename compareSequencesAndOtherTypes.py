@@ -17,5 +17,8 @@ print((1, 2, 3) == (1.0, 2.0, 3.0))
 
 print((1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4))
 
-
+# Comparing objects of different types with < or > is legal provided that the objects have the
+# appropriate comparison methods
+# For example : mixed numeric types are compared, according to their numeric value so, 0 equals 0.0
+print("0 equals 0.0?? : ", 0 == 0.0)
 
