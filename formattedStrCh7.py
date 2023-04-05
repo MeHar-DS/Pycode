@@ -38,7 +38,7 @@ print(f'Debugging {bugs=} {count=} {area=}')
 yes_votes = 42_572_654
 no_votes = 43_132_495
 
-percentage = yes_votes/yes_votes+no_votes
+percentage = yes_votes/(yes_votes+no_votes)
 
 print('{:-9} YES Votes {:2.2%}'. format(yes_votes, percentage))
 
@@ -54,11 +54,11 @@ print('{1} {0}'.format('spam', 'eggs'))
 # IF keyword arguments are used in the str.format() method, their values are referred
 # to by using the name of the argument
 
-print('This {food} is {adjective}'. format(food = 'spam', adjective= 'absolutely horrible'))
+print('This {food} is {adjective}'. format(food='spam', adjective='absolutely horrible'))
 
 # Positional and keyword argument can be arbitrarily used
 
-print('The story of {0} {1} and {other}.'.format('Bill', 'Manfred', other = 'Georg'))
+print('The story of {0} {1} and {other}.'.format('Bill', 'Manfred', other='Georg'))
 
 # if you have a really long format string that you dont want to split up, it would be nice if
 # you could reference the variables to be formatted by name instead of by position
@@ -66,4 +66,8 @@ print('The story of {0} {1} and {other}.'.format('Bill', 'Manfred', other = 'Geo
 
 table ={'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
 
-print('Jack')
+print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; Dcab: {0[Dcab]:d}'.format(table))
+
+#This could also be done by passing the table dictionary as keyword arguments with the ** notation
+
+print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
