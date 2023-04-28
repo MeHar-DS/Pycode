@@ -18,6 +18,9 @@ print("Some\\name")
 # you can use raw strings by adding an r before the first quote:'''
 print(r'C:\some\name')
 
+inte= ''' to check a strint is in the destination string'''
+print('destin' in inte)
+
 # String literals can span multiple lines.
 # One way is using triple-quotes: """...""" or ''''...''''.
 # End of lines are automatically included in the string,
@@ -322,6 +325,11 @@ s.count(x) --> total number of occurrences of x in s'''
 
 
 
+# reversing the string characters in python
+# This was covered n Selenium Tutorial Python by Software Testing Mentor - Video 21
+
+s = "Welcome to Python"
+print(s[::-1]) # Prints nohtyP ot emocleW "
 
 
 
