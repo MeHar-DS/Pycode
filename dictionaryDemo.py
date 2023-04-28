@@ -1,4 +1,4 @@
-# Dictionaries are indexed by keys, which can be any immutable type;
+# Dictionaries are indexed by keys, which can be any immutable type; do not allow duplicates
 # strings and numbers can always be keys.
 # Tuples can be used as keys if they contain only strings, numbers, or tuples;
 # if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.
@@ -18,6 +18,7 @@
 # If you want the list to be sorted then sorted(d) can be used
 # To check whether a key is existing in dictionary use the in keyword
 
+emp_dict = {}  # Empty dictionary defined
 
 tel = {'jack': 4098, 'sape': 4139}
 
@@ -30,7 +31,7 @@ del tel['sape']
 
 print(tel)
 
-tel['irv'] =4127
+tel['irv'] = 4127
 
 print(tel)
 
@@ -61,3 +62,49 @@ print(dictcomp)
 dictstrings = dict(John=1111, Don=2222, Sam=3333)
 
 print(dictstrings)
+
+
+demo_dict ={1:10, 2: 20, 3:30, 4:40, 5:50}
+demo_dict2= {"qa": "testurl", "uat":"uaturl"}
+demo_dict3= {'qa':1, 3:"uaturl"}
+
+print(demo_dict2["uat"])  # prints uaturl
+print(demo_dict3[3])  # Prints uaturl
+
+#Adding items to dictionary
+
+print("prior adding to demo_dict2:", demo_dict2)
+
+demo_dict2['prod'] = "produrl"
+
+print("after adding prod to demo_dict2",demo_dict2)
+
+
+
+print("after removing or popping the prod", demo_dict2)
+
+# methods of dictionary
+
+print(demo_dict2.get("qa"))
+print(demo_dict2.keys())
+print(demo_dict2.values())
+print(demo_dict2.items())  # The returned list contains tuples of all the key:value pairs in the dictionary
+
+# removing the item from dictionary
+print(demo_dict2)
+demo_dict2.pop("qa")
+print(demo_dict2)
+demo_dict2.popitem()  # removes the last item
+print(demo_dict2)
+
+demo_dict2.update({"prod":"produrl", "uat":"uaturl", "qa":"qaurl"})
+
+print(demo_dict2)
+
+demo_dict_copy = demo_dict2.copy()
+
+print(demo_dict_copy)
+
+demo_dict_copy.clear()  # clears all items
+
+print(demo_dict_copy)

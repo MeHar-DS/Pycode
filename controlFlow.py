@@ -73,3 +73,36 @@ class MyEmptyClass:
 
 def initilog(*args):
     pass
+
+
+# while loop
+
+x = 0
+
+while x <= 5:
+    print(x, end=" ")
+    x += 1
+print("\n\n")
+
+# while loop with else clause
+
+x = 0
+
+while x <= 5:
+    print(x, end = "\t")
+    x += 1
+else:  # Else clause with loop is executed only upon normal execution condition boundary is completed
+    print("While loop execution is completed and the else is evaluated in the end")
+
+
+# while loop with else clause and break inside while block
+
+x = 0
+
+while x <= 5:
+    print(x, end = "\t")
+    x += 1
+    if x == 3:
+        break
+else:  # this else is not executed since break is done above
+    print("While loop execution is completed and the else is evaluated in the end")

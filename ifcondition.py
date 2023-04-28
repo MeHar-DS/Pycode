@@ -20,7 +20,7 @@ for f in fruits.copy():
 
 # code using a collection
 
-users= {"Ron" : "Active", "Jon" : "Inactive", "Chris" : "On Hold", "Don" : "Suspended"}
+users = {"Ron" : "Active", "Jon" : "Inactive", "Chris" : "On Hold", "Don" : "Suspended"}
 
 for user,stat in users.copy().items():
 
@@ -35,7 +35,7 @@ b=200
 
 if a>b:
     print("a is greater than b")
-elif b>a:
+elif b > a:
     print("b is greater than a")
 else:
     print("a and b are equal")
@@ -45,4 +45,7 @@ print("a greater than b") if a>b else print("b greater than a")
 i = 1
 for i in "Stringval":
     print(i)
+
+if a > b:
+    print("a is greater than b")
 

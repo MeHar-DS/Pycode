@@ -1,4 +1,5 @@
 # Tuple is a sequence type similar to lists and strings
+# Tuples are indexed, immutable, allow duplicates
 
 t = 12345, 54321, "Hello!"
 
@@ -30,3 +31,29 @@ x, y, z = t
 # Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
 
 
+demo_tuple = (1,2,3,4,5)
+print(demo_tuple[1])
+
+demo_tuple2 = ("Delhi", "Mumbai", "NewYork", "Melbourne", "Sydney", "Delhi")  # Allows duplicates
+
+demo_tuple3 = (True, False, False, True)  # Boolean value Tuple
+
+demo_tuple4 = (True, 1, "False", 2.5)
+
+# print(demo_tuple4.append())  # Append Not available and cannot be performed since immutable
+
+# print(demo_tuple4.pop())  # Pop Not available and cannot be performed since immutable
+
+print(len(demo_tuple4))
+
+print(demo_tuple2.count("Delhi"))
+
+joined_tuple = demo_tuple+demo_tuple2+demo_tuple3+demo_tuple4  # Joining tuples
+
+print(joined_tuple)
+
+print(joined_tuple[3:5])
+
+
+
+print(demo_tuple2.index("Delhi"))

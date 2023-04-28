@@ -41,3 +41,21 @@ print('Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude
 coord = {'latitude': '37.24N', 'longitude': '-115.81W'}
 print('Coordinates: {latitude}, {longitude}'.format(**coord))  # 'Coordinates: 37.24N, -115.81W'
 
+
+# Formatting strings using % format specifier like in c
+# Learnt this in Selenium Python Tutorial Software Testing Mentor - vid -22
+
+a = "Python Class"
+b = "Selenium Class"
+
+print("I am learning both %s and %s "%(a,b))  #Prints I am learning both Python Class and Selenium Class
+
+# this works as well
+
+print("I am learning both %s and %s "%("Python Class",b))
+
+print("I am learning both {} and {} ".format(a,b))
+
+print("I am learning both {1} and {0} ".format(a,b))
+print("I am learning both {programming_language} and {Testing_tool} ".format(programming_language=a,Testing_tool=b))
+print("I am learning both {programming_language} and {Testing_tool} ".format(programming_language="Python Class",Testing_tool=b))
