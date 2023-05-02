@@ -13,7 +13,6 @@ class RateofInterest:
     #     print("Total Interest is :", self.loan * RateofInterest.interest)  # Using class level variable
 
 
-
 p1 = RateofInterest("Mervin",43000000)
 p2 = RateofInterest("Udaya",43000000)
 
