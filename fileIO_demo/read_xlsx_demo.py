@@ -3,13 +3,13 @@ from openpyxl import Workbook, load_workbook
 w = load_workbook(filename="C:\\Mervin\\write_excel.xlsx")
 sh = w.active
 sh = w["Sheet"]
-#print(sh['A1'].value)
+# print(sh['A1'].value)
 
 # Another method
-#print(w["Sheet"]["A4"].value)
+# print(w["Sheet"]["A4"].value)
 
-#Another method
-#print(sh.cell(row=2, column=4).value)
+# Another method
+# print(sh.cell(row=2, column=4).value)
 
 row_cnt = sh.max_row
 col_cnt = sh.max_column
