@@ -36,8 +36,18 @@ class DemoAutoSuggest:
         time.sleep(1)
         origin.click()
         time.sleep(1)
-        driver.find_element(By.XPATH, "//td[@id='18/05/2023']").click()
+        driver.find_element(By.XPATH, "//td[@id='18/05/2023']").click()  # Just testing selection of a date value
         time.sleep(3)
+
+        #Dynamic date entry
+
+        all_dates = driver.find_elements(By.XPATH, \
+                                         "//div[@id = 'monthWrapper']//tbody//td[@class!= 'inActiveTD weekend' or @class!= 'inActiveTD']")
+        for date in all_dates:
+            if date.get_attribute('data-date') == "30/05/2023":
+                date.click()
+                time.sleep(4)
+                break
 
 
 
