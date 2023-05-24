@@ -15,6 +15,6 @@ def testCalculation():
 def testexpectedFaildemo():
     assert 2+2 == 5
 
-@pyest.mark.skip
+@pytest.mark.skip
 def skiptestdemo():
     print("this will be skipped")
